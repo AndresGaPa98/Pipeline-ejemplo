@@ -14,7 +14,7 @@ pipeline {
             
             steps {
                 echo 'Compilando.'
-                bat 'mvn clean compile'
+                bat 'java clean compile'
                 echo 'Compilado.'
             }
         }
