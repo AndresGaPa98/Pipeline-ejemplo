@@ -10,13 +10,14 @@ pipeline {
                 bat 'java -version'
             }
         }
-        stage ("compile") {
+        stage ("compilar") {
             
             steps {
                 echo 'Compilando.'
                 bat 'javac Example.java'
                 echo 'Compilado.'
                 bat 'java Example'
+                echo 'El programa ha finalizado de forma exitosa.'
             }
         }
                      
