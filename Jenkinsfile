@@ -11,11 +11,11 @@ pipeline {
             }
         }
         stage ("compile") {
-            tools {
-               jdk "Oracle JDK 8"
-            }
+            
             steps {
-                bat 'javav Example.java'
+                echo 'Compilando.'
+                bat 'mvn clean compile'
+                echo 'Compilado.'
             }
         }
                      
