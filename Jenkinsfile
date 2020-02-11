@@ -14,9 +14,9 @@ pipeline {
             
             steps {
                 echo 'Compilando.'
-                bat 'javac Example.java'
+                bat 'javac VistaCompilador.java'
                 echo 'Compilado.'
-                bat 'java Example'
+                bat 'java VistaCompilador'
                 echo 'El programa ha finalizado de forma exitosa.'
             }
         }
