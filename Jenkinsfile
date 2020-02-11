@@ -9,13 +9,15 @@ pipeline {
             steps {
                 bat 'java -version'
             }
-             stage ("Java version") {
+        }
+        stage ("compile") {
             tools {
                jdk "Oracle JDK 8"
             }
             steps {
-                bat 'javac Example.java'
+                bat 'javav Example.java'
             }
-        }          
+        }
+                     
    }
 }
