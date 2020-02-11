@@ -14,7 +14,7 @@ pipeline {
             
             steps {
                 echo 'Compilando.'
-                bat 'javac Example compile'
+                bat 'javac Example.java'
                 echo 'Compilado.'
                 bat 'java Example'
             }
