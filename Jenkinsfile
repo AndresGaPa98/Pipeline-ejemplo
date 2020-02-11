@@ -20,13 +20,10 @@ pipeline {
                 echo 'Compilado.'
                 bat 'java Example'
                 echo 'El programa ha finalizado de forma exitosa.'
+                mail bcc: '', body: 'Todo salio bien.', cc: '', from: 'andresgarcia7960@gmail.com', replyTo: '', subject: 'Result', to: 'andresgarciapacheco7@gmail.com'
             }
         }
-        post {
-        always {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
-        }
-    }
+        
                      
    }
 }
