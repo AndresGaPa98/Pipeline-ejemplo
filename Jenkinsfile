@@ -2,12 +2,19 @@ pipeline {
     agent any
 
     stages {  
-        stage ("build") {
+        stage ("Java version") {
             tools {
                jdk "Oracle JDK 8"
             }
             steps {
                 bat 'java -version'
+            }
+             stage ("Java version") {
+            tools {
+               jdk "Oracle JDK 8"
+            }
+            steps {
+                bat 'javac Example.java'
             }
         }          
    }
