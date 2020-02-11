@@ -7,7 +7,7 @@ pipeline {
                jdk "Oracle JDK 8"
             }
             steps {
-                sh 'java -version'
+                bat 'java -version'
             }
         }          
    }
