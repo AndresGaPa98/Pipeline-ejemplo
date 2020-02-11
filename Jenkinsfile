@@ -1,11 +1,14 @@
 pipeline {
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                echo 'Compilando...'
-				sh 'make'
+    agent any
+
+    stages {  
+        stage ("build") {
+            tools {
+               jdk "Oracle JDK 8"
             }
-        }
-	}
+            steps {
+                sh 'java -version'
+            }
+        }          
+   }
 }
