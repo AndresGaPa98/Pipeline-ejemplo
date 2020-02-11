@@ -14,14 +14,19 @@ pipeline {
             
             steps {
                 echo 'Compilando.'
-                bat 'javac TextPrompt.java'
-                bat 'javac VistaCompilador.java'
+               
+                bat 'javac Example.java'
                 
                 echo 'Compilado.'
-                bat 'java VistaCompilador'
+                bat 'java Example'
                 echo 'El programa ha finalizado de forma exitosa.'
             }
         }
+        post {
+        always {
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+        }
+    }
                      
    }
 }
