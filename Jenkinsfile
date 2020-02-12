@@ -1,8 +1,12 @@
 pipeline {
+    def username = 'Andres'
     agent any
 
     stages {  
         stage ("Java version") {
+            step{
+                echo "Hola ${username}"
+            }
             tools {
                jdk "Oracle JDK 8"
             }
