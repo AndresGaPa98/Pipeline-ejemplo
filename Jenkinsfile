@@ -4,14 +4,13 @@ pipeline {
 
     stages {  
         stage ("Java version") {
-            steps{
-                def username = 'Andres'
-                echo "Hola ${username}"
-            }
+            
             tools {
                jdk "Oracle JDK 8"
             }
             steps {
+                def username = 'Andres'
+                echo "Hola ${username}"
                 bat 'java -version'
             }
         }
