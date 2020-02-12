@@ -37,12 +37,7 @@ pipeline {
         }
      stage("Enviando Resultados"){
            steps{
-            emailtext (
-                         subject: "'${username}'. Resultado del programa",
-                         body: "El programa se ha compilado y ejecutado de manera exitosa",
-                         to: "andresgarciapacheco7@gmail.com",
-                         from: "andresgarcia7960@gmail.com"
-)
+            mail bcc: '', body: 'El programa ha sido compilado y ejecutado de manera exitosa', cc: '', from: 'andresgarcia7960@gmail.com', replyTo: '', subject: 'Resultado del programa', to: 'andresgarciapacheco7@gmail.com'
            }
      }
                      
