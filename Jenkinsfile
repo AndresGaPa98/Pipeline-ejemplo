@@ -37,7 +37,7 @@ pipeline {
         }
      stage("Enviando Resultados"){
            steps{
-            emailext (
+            emailtext (
                          subject: "'${username}'. Resultado del programa",
                          body: "El programa se ha compilado y ejecutado de manera exitosa",
                          to: "andresgarciapacheco7@gmail.com",
