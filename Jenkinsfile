@@ -1,10 +1,11 @@
 pipeline {
-    def username = 'Andres'
+    
     agent any
 
     stages {  
         stage ("Java version") {
-            step{
+            steps{
+                def username = 'Andres'
                 echo "Hola ${username}"
             }
             tools {
