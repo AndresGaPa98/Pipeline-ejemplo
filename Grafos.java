@@ -9,7 +9,7 @@ public class Grafos {
 
 	public Grafos(int numNodos) {
 		this.numNodos = numNodos;
-		Nodo = new int [numNodos];
+		Nodo = new int [numNodos]
 	}
 
 	public  void MostrarDatos() {
