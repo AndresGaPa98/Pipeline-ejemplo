@@ -15,15 +15,20 @@ pipeline {
             steps {
                 echo 'Compilando.'
                
-                bat 'javac Example.java'
+                bat 'javac Grafo.java'
                 
                 echo 'Compilado.'
-                bat 'java Example'
-                echo 'El programa ha finalizado de forma exitosa.'
-                mail bcc: '', body: 'Todo salio bien.', cc: '', from: 'andresgarcia7960@gmail.com', replyTo: '', subject: 'Result', to: 'andresgarciapacheco7@gmail.com'
+                
+                
             }
         }
-        
+        stage ("Run"){
+            steps{
+                echo 'Corriendo Grafo.java.'
+                bat 'java Grafo'
+                echo 'Programa finalizado.'
+            }
+        }
                      
    }
 }
