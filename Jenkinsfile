@@ -1,3 +1,4 @@
+ def username = 'Andres'
 pipeline {
     
     agent any
@@ -9,7 +10,7 @@ pipeline {
                jdk "Oracle JDK 8"
             }
             steps {
-                def username = 'Andres'
+               
                 echo "Hola ${username}"
                 bat 'java -version'
             }
