@@ -34,9 +34,9 @@ pipeline {
                 echo 'Programa finalizado.'
              
             }
-        }
-     
-        post{
+        }               
+      }
+      post{
               failure{
                        mail bcc: '', body: 'Hubo un error.', cc: '', from: 'andresgarcia7960@gmail.com', replyTo: '', subject: 'Resultado del programa', to: 'andresgarciapacheco7@gmail.com'
                      }
@@ -44,6 +44,4 @@ pipeline {
                       mail bcc: '', body: 'El programa ha sido compilado y ejecutado de manera exitosa', cc: '', from: 'andresgarcia7960@gmail.com', replyTo: '', subject: 'Resultado del programa', to: 'andresgarciapacheco7@gmail.com'
                      }
             }
-                     
-   }
 }
