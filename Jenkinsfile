@@ -32,13 +32,19 @@ pipeline {
                 echo 'Corriendo Grafo.java.'
                 bat 'java Grafos'
                 echo 'Programa finalizado.'
-             if(currentBuild.result == 'SUCCESS'){
-              echo 'yes'
-             }else{
-              echo 'no'
-              }
+             
             }
         }
+     stage("Enviando Resultados"){
+           steps{
+            emailext (
+                         subject: "'${username}'. Resultado del programa",
+                         body: "El programa se ha compilado y ejecutado de manera exitosa",
+                         to: "andresgarciapacheco7@gmail.com",
+                         from: "andresgarcia7960@gmail.com"
+)
+           }
+     }
                      
    }
 }
