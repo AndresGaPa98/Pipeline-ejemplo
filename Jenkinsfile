@@ -32,7 +32,7 @@ pipeline {
                 echo 'Corriendo Grafo.java.'
                 bat 'java Grafos'
                 echo 'Programa finalizado.'
-             if(currentBuild.result = 'SUCCESS'){
+             if(currentBuild.result == 'SUCCESS'){
               echo 'yes'
              }else{
               echo 'no'
