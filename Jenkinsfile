@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo 'Compilando.'
                
-                bat 'javac Grafo.java'
+                bat 'javac Grafos.java'
                 
                 echo 'Compilado.'
                 
@@ -25,7 +25,7 @@ pipeline {
         stage ("Run"){
             steps{
                 echo 'Corriendo Grafo.java.'
-                bat 'java Grafo'
+                bat 'java Grafos'
                 echo 'Programa finalizado.'
             }
         }
